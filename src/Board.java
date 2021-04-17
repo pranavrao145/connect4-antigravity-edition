@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class Board {
+public class Board { // board class - will be instantiated and belong to an instance of Game
     private char[][] board; // declaring character array for board
     public static final int ROWS = 6; // declaring constant for the number of rows the board will have
     public static final int COLUMNS = 7; // declaring constant for the number of columns the board will have

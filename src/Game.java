@@ -1,4 +1,4 @@
-public class Game {
+public class Game { // Game class - an instance represents the current running game
     private Board board; // declaring board object
     private final Player player1, player2; // declaring the two player objects for this instance of the Game object
     private int gameState; // declaring int var for this game's state. (0 when game is in setup, 1 when it is player 1's turn, 2 for player 2's turn, -1 for game over

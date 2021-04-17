@@ -1,10 +1,17 @@
+/* Name: Pranav Rao
+   Course Code : ICS3U0
+   Program Title: Connect 4 [Antigravity Edition] - Game Helper
+   Date Completed : April 22, 2021
+   Program Description: Helper class that provides useful objects and methods for running a game of Connect 4 [Antigravity Edition].
+*/
+
 import java.io.*;
 import java.sql.Timestamp;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class GameHelper { // GameHelper class - helper class that provides useful objects and methods for running a game
+public class GameHelper {
     public static HashMap<Character, Integer> columnIndexes = new HashMap<>(); // declares and initializes new hashmap which will be used to associate column letters with numbers for indexes
     public static Scanner scanner = new Scanner(System.in); // declaring and initializing a scanner object
 

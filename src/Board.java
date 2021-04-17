@@ -1,3 +1,11 @@
+/* Name: Pranav Rao
+   Course Code : ICS3U0
+   Program Title: Connect 4 [Antigravity Edition] - Board
+   Date Completed : April 22, 2021
+   Program Description: Board class - an instance of this class represents the board in a game of Connect 4 [Antigravity Edition].
+                        Any instance of this class will be an attribute of an instance of the Game class.
+*/
+
 import java.util.Arrays;
 
 public class Board { // board class - will be instantiated and belong to an instance of Game

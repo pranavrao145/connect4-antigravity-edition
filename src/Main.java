@@ -1,4 +1,11 @@
-public class Main { // Main class - driver code for the whole program
+/* Name: Pranav Rao
+   Course Code : ICS3U0
+   Program Title: Connect 4 [Antigravity Edition] - Main
+   Date Completed : April 22, 2021
+   Program Description: Main class and driver code for Connect 4 [Antigravity Edition].
+*/
+
+public class Main {
     public static void main(String[] args) { // main function
         System.out.println("Welcome to Connect 4 - Gravity Edition!");
 

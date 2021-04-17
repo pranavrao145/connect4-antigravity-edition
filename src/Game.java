@@ -1,4 +1,11 @@
-public class Game { // Game class - an instance represents the current running game
+/* Name: Pranav Rao
+   Course Code : ICS3U0
+   Program Title: Connect 4 [Antigravity Edition] - Game
+   Date Completed : April 22, 2021
+   Program Description: Game class - an instance of this class represents the active game of Connect 4 [Antigravity Edition].
+*/
+
+public class Game {
     private Board board; // declaring board object
     private final Player player1, player2; // declaring the two player objects for this instance of the Game object
     private int gameState; // declaring int var for this game's state. (0 when game is in setup, 1 when it is player 1's turn, 2 for player 2's turn, -1 for game over

@@ -107,7 +107,7 @@ public class GameHelper {
             }
 
             if (isValidAntiGravityPlacement(board, player, row, column)) { // if the given antigravity piece placement is valid
-                if (row > player.getHighestLevel())
+                if (row < player.getHighestLevel())
                     player.setHighestLevel(row); // if the new row is higher than the level the player has already built to, set the player's highest level to that row
                 board.getCurrentBoard()[row - 1][columnIndexes.get(column) - 1] = 'A'; // place the antigravity piece at the slot given
 
@@ -225,7 +225,7 @@ public class GameHelper {
                             currentRowIndex++; // if the NEXT index is empty, increment currentRowIndex to the next row down
                         else { // if the NEXT index is NOT empty, then place the piece at the current row and column specified (last free place)
                             board.getCurrentBoard()[currentRowIndex][columnNum - 1] = player.getColorName(); // place a piece of the player's colour in the current spot
-                            if (currentRowIndex + 1 > player.getHighestLevel()) // if the currentRowIndex + 1 (the row number on the board) is greater than the highest level the player has built to
+                            if (currentRowIndex + 1 < player.getHighestLevel()) // if the currentRowIndex + 1 (the row number on the board) is greater than the highest level the player has built to
                                 player.setHighestLevel(currentRowIndex + 1); // set the highest level of the player to the current row number (index + 1)
                             success = true; // change success flag to true so the method does not run again
                             currentRowIndex = Board.ROWS; // set the currentRowIndex to off the board so the loop looping through the board's rows gets terminated

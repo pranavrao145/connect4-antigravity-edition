@@ -241,11 +241,13 @@ public class GameHelper {
     // method that takes a board object and checks if there is a win on that board.
     // if there is, return the character of the player that won, else return E for empty slot.
     public static char checkWin(Board board) {
-        // basic algorithm: loop through the matrix and for each element check for 3 other instances of the character in that slots in the
-        // following directions: up, right, up + right, up + left. Since we are looping through the entire board (all the way to the bottom)
-        // there is no need to check the opposite directions (down, left, down + left, down + right), because those will be checked when we
-        // check the first four conditions on the pieces at the bottom fo the board (the direction in which the program detects the win does
-        // not matter).
+        /*
+         basic algorithm: loop through the matrix and for each element check for 3 other instances of the character in that slots in the
+         following directions: up, right, up + right, up + left. Since we are looping through the entire board (all the way to the bottom)
+         there is no need to check the opposite directions (down, left, down + left, down + right), because those will be checked when we
+         check the first four conditions on the pieces at the bottom fo the board (the direction in which the program detects the win does
+         not matter).
+        */
 
         char[][] currentBoard = board.getCurrentBoard(); // get the current board
         final char EMPTY_SLOT = 'E'; // declaring and initializing a constant for purposes of easier reference to an empty slot
@@ -308,7 +310,7 @@ public class GameHelper {
             if (file.exists()) { // if the file already exists
                 BufferedReader reader = new BufferedReader(new FileReader("data/logs.txt")); // declare and initialize a new BufferedReader object with data/logs.txt as the filename
 
-                System.out.println("\nHere are the logs: ");
+                System.out.println("\nHere are the logs: \n");
 
                 String line = reader.readLine(); // read the first line and store it in the String variable line
 

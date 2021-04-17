@@ -13,6 +13,7 @@ public class Player { // Player class - will be instantiated and will belong to 
 
 
     // Getters and setters
+
     public int getHighestLevel() {
         return highestLevel;
     }

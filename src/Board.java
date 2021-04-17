@@ -27,6 +27,9 @@ public class Board { // board class - will be instantiated and belong to an inst
         System.out.println(); // formatting
     }
 
+
+    // getters and setters
+
     public char[][] getCurrentBoard() { // getter function - returns the current char array board of this Board object
         return board;
     }

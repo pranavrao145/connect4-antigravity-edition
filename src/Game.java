@@ -208,6 +208,7 @@ public class Game { // Game class - an instance represents the current running g
 
 
     // getters and setters
+
     public Board getBoard() {
         return board;
     }

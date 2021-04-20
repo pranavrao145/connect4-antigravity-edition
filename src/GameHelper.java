@@ -331,7 +331,7 @@ public class GameHelper {
     public static void writeLogs(char winningPlayer) {
         try { // try to write to the logs file - I/O operations can cause an error, so we are using a try catch statement to catch the error in that case.
             Timestamp currentTimestamp = new Timestamp(new Date().getTime()); // declaring and initializing timestamp object - essentially getting the current date and time in a timestamp form
-            PrintWriter output = new PrintWriter(new FileWriter("data/logs.txt")); // declaring and initializing a new PrintWriter object with filename data/logs.txt. This will be written to later.
+            PrintWriter output = new PrintWriter(new FileWriter("data/logs.txt", true)); // declaring and initializing a new PrintWriter object with filename data/logs.txt. This will be written to later.
 
             String winningColor; // declare a string variable that will be initialized dynamically
 

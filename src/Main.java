@@ -61,23 +61,25 @@ public class Main {
                             System.out.println("No one won the game."); // inform players of this
                             GameHelper.writeLogs('N'); // write this result to the logs (draw)
                         }
-                        System.out.println("Game exited successfully.\n"); // let the users know the game exited successfully. After this, the current game instance is destroyed.
+                        System.out.println("Game exited successfully."); // let the users know the game exited successfully. After this, the current game instance is destroyed.
                         break;
                     case 2: // if it is 2 (how to play)
-                        System.out.println("To learn how to play this game, please visit this link: https://docs.google.com/document/d/1itUWjn1K5enw4uMxQpyCaDoXEoYSXHGMX0TPXAARk1Q/edit?usp=sharing");
+                        System.out.println("\nTo learn how to play this game, please visit this link: https://docs.google.com/document/d/1itUWjn1K5enw4uMxQpyCaDoXEoYSXHGMX0TPXAARk1Q/edit?usp=sharing");
                         break;
                     case 3: // if it is 3 (view the logs)
                         GameHelper.printLogs(); // print the logs
                         break;
                     case 4: // if it is 4 (exit)
+                        System.out.println("\n" +
+                                "Exiting game, thanks for playing!");
                         appRunning = false; // set the appRunning flag to false so the loop does not run again
                         break;
                     default: // if the input is invalid
-                        System.out.println("That is not a valid input. Please try again.");
+                        System.out.println("Invalid input, please try again.");
                         break;
                 }
             } catch (Exception ignored) { // if there is an exception
-                System.out.println("That is not a valid input. Please try again."); // inform the user of invalid input
+                System.out.println("Invalid input, please try again."); // inform the user of invalid input
                 GameHelper.scanner.nextLine(); // clear scanner buffer
             }
 

@@ -85,7 +85,7 @@ public class Game {
                                 break;
                         }
                     } catch (Exception ignored) { // if the user gives a wrong input and an exception is generated, this catch block will handle it
-                        System.out.println("That is not a valid input. Please try again.");
+                        System.out.println("Invalid input, please try again.\n");
                         GameHelper.scanner.nextLine(); // clear scanner buffer
                     }
                 }
@@ -114,7 +114,7 @@ public class Game {
                                 break;
                         }
                     } catch (Exception ignored) { // if the user gives a wrong input and an exception is generated, this catch block will handle it
-                        System.out.println("That is not a valid input. Please try again.");
+                        System.out.println("Invalid input, please try again.\n");
                         GameHelper.scanner.nextLine(); // clear scanner buffer
                     }
                 }
@@ -164,7 +164,7 @@ public class Game {
                                 System.out.println("Invalid input, please try again.\n");
                         }
                     } catch (Exception ignored) { // if the user gives a wrong input and an exception is generated, this catch block will handle it
-                        System.out.println("That is not a valid input. Please try again.");
+                        System.out.println("Invalid input, please try again.\n");
                         GameHelper.scanner.nextLine(); // clear scanner buffer
                     }
                 }
@@ -189,7 +189,7 @@ public class Game {
                                 break;
                         }
                     } catch (Exception ignored) { // if the user gives a wrong input and an exception is generated, this catch block will handle it
-                        System.out.println("That is not a valid input. Please try again.");
+                        System.out.println("Invalid input, please try again.\n");
                         GameHelper.scanner.nextLine(); // clear scanner buffer
                     }
                 }

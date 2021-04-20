@@ -20,7 +20,7 @@ public class Game {
         turnNumber = 1; // setting the turn number to 1 for beginning of game
     }
 
-    public void setUpGame() { // function called to set up the game (placing initial antigravity pieces)
+    public void setUpGame() { // method called to set up the game (placing initial antigravity pieces)
         GameHelper.placeAntiGravityPiece(player1, board); // place player 1's first antigravity piece
         GameHelper.placeAntiGravityPiece(player2, board); // place player 2's first antigravity piece
         GameHelper.placeAntiGravityPiece(player1, board); // place player 1's second antigravity piece
@@ -29,7 +29,7 @@ public class Game {
         gameState = 1; // set gameState to 1, indicating player 1's turn
     }
 
-    public boolean executeTurn(Player player) { // function to execute a turn, given the player whose turn it is
+    public boolean executeTurn(Player player) { // method to execute a turn, given the player whose turn it is
         System.out.printf("It's player %d's (%s) turn. Player is currently on turn number %d.%n", player.getColorNum(), player.getColorName() == 'R' ? "red's" : "yellow's", turnNumber);
         System.out.println("\nCurrent board:");
         board.print(); // printing the current board for the player's information
@@ -210,7 +210,7 @@ public class Game {
             gameState = -1; // the game has been won and completed, so sets gameState to -1 to signify game over
         }
 
-        return true; // if the function executed successfully, return true to the driver function
+        return true; // if the method executed successfully, return true to the driver method
     }
 
 

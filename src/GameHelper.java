@@ -66,9 +66,9 @@ public class GameHelper {
     public static void placeAntiGravityPiece(Player player, Board board) {
         boolean success = false; // declare and initialize to false a boolean flag which will indicate the current state of success of this method
 
-        while (!success) { // while the function is not successful
-            char column = 'Z'; // declare and initialize column variable that will be used later in the function
-            int row = 0; // declare and initialize row variable that will be used later in the function
+        while (!success) { // while the method is not successful
+            char column = 'Z'; // declare and initialize column variable that will be used later in the method
+            int row = 0; // declare and initialize row variable that will be used later in the method
 
             boolean validInput = false; // declaring and initializing boolean flag to determine if valid input has been given or not
 
@@ -114,7 +114,7 @@ public class GameHelper {
                 // print out current board
                 System.out.println("\nCurrent board: ");
                 board.print();
-                success = true; // set success flag to true to indicate the success of the function
+                success = true; // set success flag to true to indicate the success of the method
             } else {  // if the antigravity piece placement is not valid
                 System.out.println("Invalid piece placement, try again.\n"); // informing user of invalid input
             }
@@ -127,8 +127,8 @@ public class GameHelper {
         boolean success = false; // declare and initialize to false a boolean flag which will indicate the current state of success of this method
 
         while (!success) { // while the method is not successful
-            char column = 'Z'; // declare and initialize column variable that will be used later in the function
-            int row = 0; // declare and initialize row variable that will be used later in the function
+            char column = 'Z'; // declare and initialize column variable that will be used later in the method
+            int row = 0; // declare and initialize row variable that will be used later in the method
 
             boolean validInput = false; // declaring and initializing boolean flag to determine if valid input has been given or not
 
@@ -179,7 +179,7 @@ public class GameHelper {
                 }
 
                 player.setRemovedAntiGravityPiece(true); // set the player's removedAntiGravityPiece attribute to true, which will prevent them from removing another one later in the game
-                success = true; // the function is successful, so set success flag to true so this loop does not run again
+                success = true; // the method is successful, so set success flag to true so this loop does not run again
             } else { // if the loop is unsuccessful for some reason
                 System.out.println("No antigravity piece at that position or invalid position, try again.\n"); // inform the user of error before looping again
             }
@@ -193,7 +193,7 @@ public class GameHelper {
         boolean success = false; // declare and initialize to false a boolean flag which will indicate the current state of success of this method
 
         while (!success) { // while the method is not successful
-            char column = 'Z'; // declare and initialize column variable that will be used later in the function
+            char column = 'Z'; // declare and initialize column variable that will be used later in the method
 
             boolean validInput = false; // declaring and initializing boolean flag to determine if valid input has been given or not
 
@@ -305,6 +305,8 @@ public class GameHelper {
     // method that takes no parameters and prints the logs from the data/logs.txt file.
     // returns nothing
     public static void printLogs() {
+        int redWins = 0, yellowWins = 0, noWin = 0; // declare three new int variables which will store the number of wins red has and yellow has, along with the number of unfinished games. These variables will be updated when reading from the file, and will be displayed at the end of this method.
+
         try { // try to read from the logs - I/O operations can cause an error, so we are using a try catch statement to catch the error in that case.
             File file = new File("data/logs.txt"); // declares and initializes a new file object using the pathname data/logs.txt (our desired file)
             if (file.exists()) { // if the file already exists
@@ -312,12 +314,23 @@ public class GameHelper {
 
                 System.out.println("\nHere are the logs: \n");
 
-                String line = reader.readLine(); // read the first line and store it in the String variable line
+                String line = reader.readLine(); // read the first line and store it in the String variable lin
+
 
                 while (line != null) { // while the line variable has some content
+                    if (line.toLowerCase().contains("red")) redWins++; // if the log line contains 'red' add one to the wins red has
+                    else if (line.toLowerCase().contains("yellow")) yellowWins++; // if the log line contains 'yellow' add one to the wins yellow has
+                    else noWin++; // if neither colour is present in the line (i.e. no one one that game), add one to the number of unfinished games
                     System.out.println(line); // print out the line
                     line = reader.readLine(); // read the next line
+
                 }
+
+                System.out.println("\nSUMMARY: "); // printing out a summary
+                System.out.println("Red wins: " + redWins); // output the number of wins red has
+                System.out.println("Yellow wins: " + yellowWins); // output the number of wins yellow has
+                System.out.println("Unfinished games: " + noWin); // output the number of unfinished games
+
             } else { // if the file does not exist yet
                 System.out.println("\nThere are no logs yet. Play the game to view the logs."); // inform the user there are no logs
             }

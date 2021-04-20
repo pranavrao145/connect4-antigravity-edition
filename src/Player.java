@@ -15,8 +15,8 @@ public class Player {
     public Player(char colorName, int colorNum) { // constructor
         this.highestLevel = 7; // sets the highest level of the player to 7 (off the board)
         this.removedAntiGravityPiece = false; // sets the boolean flag removedAntiGravityPiece to false
-        this.colorName = colorName; // sets the colour name to the value passed to the constructor function
-        this.colorNum = colorNum; // sets the colour number to the value passed to the constructor function
+        this.colorName = colorName; // sets the colour name to the value passed to the constructor method
+        this.colorNum = colorNum; // sets the colour number to the value passed to the constructor method
     }
 
 

@@ -22,7 +22,7 @@ public class Board { // board class - will be instantiated and belong to an inst
         }
     }
 
-    public void print() { // function to print the board
+    public void print() { // method to print the board
         System.out.println("    A B C D E F G"); // formatting (print column letters)
         System.out.println("    -------------"); // formatting
         for (int i = 0; i < board.length; i++) { // loop over the values 0-5 inclusive (used to access rows in the char array board)
@@ -38,7 +38,7 @@ public class Board { // board class - will be instantiated and belong to an inst
 
     // getters and setters
 
-    public char[][] getCurrentBoard() { // getter function - returns the current char array board of this Board object
+    public char[][] getCurrentBoard() { // getter method - returns the current char array board of this Board object
         return board;
     }
 }

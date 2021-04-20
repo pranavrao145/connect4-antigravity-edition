@@ -6,7 +6,7 @@
 */
 
 public class Main {
-    public static void main(String[] args) { // main function
+    public static void main(String[] args) { // main method
         System.out.println("Welcome to Connect 4 - Gravity Edition!");
 
         String[] options = { // declaring and initializing options array for dynamic display later on
@@ -44,7 +44,7 @@ public class Main {
                         // printing out current board
                         System.out.println("\nCurrent board: ");
                         game.getBoard().print();
-                        game.setUpGame(); // call set up game function, which will set up the instance of the Game class it is called on
+                        game.setUpGame(); // call set up game method, which will set up the instance of the Game class it is called on
                         while (game.getGameState() != -1) { // while the state of the game is not -1 (i.e. while it is running) - check Game class for more information
                             if (game.getGameState() == 1) { // if the gameState is 1 (i.e. player 1 is playing)
                                 if (!game.executeTurn(game.getPlayer1())) game.setGameState(-1); // execute the turn with player 1 of the game instance. If the executeTurn() method returns false, set the gameState to -1 (ended) so the loop does not run again

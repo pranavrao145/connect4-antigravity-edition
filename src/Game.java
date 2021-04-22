@@ -101,7 +101,7 @@ public class Game {
                                 GameHelper.dropRegularPiece(player, board); // start process for a given player to drop a regular piece on the board
                                 validInput = true; // change validInput to true so this loop does not run again
                                 break;
-                            case 2:
+                            case 2: // if it is 2
                                 GameHelper.placeAntiGravityPiece(player, board); // start process for a given player to place an antigravity piece on the board
                                 validInput = true; // change validInput to true so this loop does not run again
                                 break;

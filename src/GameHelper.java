@@ -312,10 +312,14 @@ public class GameHelper {
             if (file.exists()) { // if the file already exists
                 BufferedReader reader = new BufferedReader(new FileReader("data/logs.txt")); // declare and initialize a new BufferedReader object with data/logs.txt as the filename
 
-                System.out.println("\nHere are the logs: \n");
-
                 String line = reader.readLine(); // read the first line and store it in the String variable lin
 
+                if (line == null) { // checks if the first line of the file is null. If it is, it means there are no logs
+                    System.out.println("\nThere are no logs yet. Play the game to view the logs."); // inform the user there are no logs
+                    return; // return so this function does not complete execution
+                }
+
+                System.out.println("\nHere are the logs: \n");
 
                 while (line != null) { // while the line variable has some content
                     if (line.toLowerCase().contains("red")) redWins++; // if the log line contains 'red' add one to the wins red has
